@@ -22,7 +22,7 @@ footer {
 }
 
 .nav {
-    height: 55px;
+    height: 60px;
     max-width: 1000px;
     font-family: sans-serif;
     display: flex;
@@ -46,7 +46,7 @@ footer {
 .footer-copyright {
     font-size: .90em;
     align-self: center;
-    margin-top: 72px;
+    margin-top: 48px;
 }
 
 .footer-brand {
@@ -73,7 +73,8 @@ footer {
 
 .nav-links li {
     display: inline;
-    padding: 0 10px;
+    /*padding: 0 10px;*/
+    padding: 0;
 }
 
 .nav-links a {
@@ -82,6 +83,7 @@ footer {
     font-size: 1.25em;
     opacity: .75;
     transition: opacity 0.3s linear ;
+    padding: 10px;
 }
 
 .nav-links a::after {
@@ -109,3 +111,42 @@ footer {
 .nav-links a:hover {
     opacity: 1;
 }
+
+.hamburger {
+    display: none;
+}
+
+.hamburger img {
+    width:1.75em;
+}
+
+@media only screen and (max-width: 768px) {
+    .hamburger {
+        display: inline-block;
+    }
+
+    .nav-links li {
+    display: block;
+    text-align: center;
+    padding: 0;
+    border-bottom: 2px solid #eee;
+    
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 63px;
+        left: 0px;
+        width: 100%;
+
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 0;
+    }
+
+}
+
+
+
