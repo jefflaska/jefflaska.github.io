@@ -1,5 +1,13 @@
+@font-face {
+    font-family: SinkinSans;
+    src: url("../fonts/SinkinSans-400Regular.woff") format("woff");
+}
+
 body {
+    overflow-x: hidden;
     margin: 0;
+    padding-top: 70px;
+    transition: padding-top .3s ease-in-out;
 }
 
 header {
@@ -7,22 +15,143 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    border-bottom: 2px solid #eee;
+    box-shadow: 0 4px 6px -6px #222;
+    
 }
+
+
+.home-image {
+    background: url("../images/mountain-view.jpeg") no-repeat;
+    background-size: cover;
+    height: auto;
+    background-position: 50% 75%;
+}
+
+.home-image-inner {
+    color:#fff;
+    text-align: center;
+    font-family: sans-serif;
+    height: 500px;
+
+}
+
+.home-image-inner h2 {
+    letter-spacing: .15em;
+    font-size: 2em;
+    padding-top: 125px;
+    font-family: SinkinSans;
+    margin-top: 0px;
+}
+
+
+.nav {
+    min-height: 70px;
+    font-family: SinkinSans;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.nav-brand {
+    display: inline-block;
+}
+
+.nav-brand a {
+    text-decoration: none;
+    font-size: 1.25em;
+    color:#000;
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    padding: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1em;
+    color:#000;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+button.hamburger:focus {
+    outline:0;
+}
+
+@media only screen and (max-width: 768px) {
+    .hamburger {
+        display: inline-block;
+    }
+
+    .nav-links li {
+        display: block;
+        text-align: center;
+        padding: 0;
+        border-bottom: 1px solid #fff;  
+        background-color: #fff;    
+        }
+
+
+    .nav-links {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        margin-top: 70px;
+        width: 100%;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 20px 0;
+    }
+    
+    .hamburger-show-nav-links {
+        transition: all .3s ease-in-out;
+        max-height:500px;
+    }
+
+    .nav-links ul {
+       margin-bottom: 10px;
+        box-shadow: 0 4px 6px -6px #222;
+    }
+}
+
+/*
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding-top: 70px;
+    transition: padding-top .3s ease-in-out;
+}
+
+
 
 footer {
     height: 150px;
     background-color: #2B6592;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
     color: #fff;    
     border-top: 2px solid #eee;
 }
 
 .nav {
-    height: 60px;
+    height: 70px;
     max-width: 1000px;
     font-family: sans-serif;
     display: flex;
@@ -73,7 +202,6 @@ footer {
 
 .nav-links li {
     display: inline;
-    /*padding: 0 10px;*/
     padding: 0;
 }
 
@@ -185,3 +313,4 @@ button.hamburger:focus {
     transition: padding-top .3s ease-in-out;
 }
 
+*/
