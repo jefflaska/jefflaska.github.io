@@ -61,7 +61,7 @@ footer {
 
 .nav-brand a {
     text-decoration: none;
-    color: #000;
+    color: #2B6592;
     font-size: 1.5em;
 }
 
@@ -116,8 +116,15 @@ footer {
     display: none;
 }
 
-.hamburger img {
-    width:1.75em;
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after,
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after{
+    background-color: #2B6592;
+    height:1.5px;
+    width: 35px;
+}
+
+button.hamburger:focus {
+    outline:0;
 }
 
 @media only screen and (max-width: 768px) {
@@ -130,23 +137,51 @@ footer {
     text-align: center;
     padding: 0;
     border-bottom: 2px solid #eee;
-    
+    background-color: #fff;
+  
     }
 
     .nav-links {
         position: absolute;
-        top: 63px;
+        top: 0px;
         left: 0px;
+        margin-top: 60px;
         width: 100%;
-
+        max-height: 0px;
+        overflow: hidden;
+        transition: all .3s ease-in-out;
     }
 
     .nav-links a {
         display: block;
-        padding: 15px 0;
+        padding: 25px 0;
+    }
+
+    .hamburger-show-nav-links {
+        transition: all .3s ease-in-out;
+        max-height:500px;
+    }
+    .small-nav-margin {
+        margin-top: 80px;
+        transition: all .3s ease-in-out;
     }
 
 }
 
 
+.small-nav {
+    height: 80px;
+    transition: all .3s ease-in-out;
+    
+}
+
+.small-nav-header 
+{
+    box-shadow: 0 4px 6px -6px #222;
+}
+
+.small-nav-padding {
+    padding-top: 80px;
+    transition: padding-top .3s ease-in-out;
+}
 
